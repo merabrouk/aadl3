@@ -10,7 +10,7 @@ sound_file = "./notification-6175.mp3"
 
 # Function to create a WebDriver instance
 def create_driver():
-    return webdriver.Chrome()  # You can use any webdriver here
+    return webdriver.Chrome()  
 
 # Function to check if the webpage is accessible
 def is_page_accessible(driver, url):
@@ -37,7 +37,10 @@ def refresh_until_accessible(driver, url):
 driver = create_driver()
 
 # Start monitoring
-refresh_until_accessible(driver, url)
+refresh_until_accessible(driver, url)Z
+
+while True:
+    time.sleep(1)
 
 # Note: Do not close the driver here if you want to keep the browser open.
 # driver.quit()  # Commented out to keep the browser open
